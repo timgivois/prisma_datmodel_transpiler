@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parser creates an AST 1`] = `
+SDL {
+  "addDefinition": [Function],
+  "enumDefinitions": Array [],
+  "scalarDefinitions": Array [],
+  "typeDefinitions": Array [
+    Defintion {
+      "addAssignment": [Function],
+      "assignments": Array [
+        Assignment {
+          "key": "id",
+          "setType": [Function],
+          "token": "VARIABLE",
+          "unique": false,
+          "value": "ID",
+        },
+        Assignment {
+          "key": "name",
+          "setType": [Function],
+          "token": "VARIABLE",
+          "unique": false,
+          "value": "STRING",
+        },
+      ],
+      "getScope": [Function],
+      "name": "User",
+      "scope": "TYPE_DEFINITION",
+      "setName": [Function],
+      "token": "TYPE_DEFINITION",
+    },
+  ],
+}
+`;
+
+exports[`parser throws syntax error 1`] = `"Syntax error: TYPE_DEFINITION"`;

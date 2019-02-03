@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generator generates code from AST tree  1`] = `
+"
+scalar DateTime
+
+scalar Long
+
+\\"\\"\\"An object with an ID\\"\\"\\"
+interface Node {
+  \\"\\"\\"The id of the object.\\"\\"\\"
+  id: ID!
+}
+
+
+type User implements Node {
+	id: ID
+	name: STRING
+}
+  "
+`;

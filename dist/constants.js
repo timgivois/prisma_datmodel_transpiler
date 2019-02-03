@@ -1,0 +1,23 @@
+"use strict";
+exports.__esModule = true;
+exports.TYPE_DEFINITION = 'TYPE_DEFINITION';
+exports.OPEN_BRACES = 'OPEN_BRACES';
+exports.CLOSE_BRACES = 'CLOSE_BRACES';
+exports.EQUAL = 'EQUAL';
+exports.TYPE = 'TYPE';
+exports.ID = 'ID';
+exports.DATETIME = 'DATETIME';
+exports.STRING = 'STRING';
+exports.BOOLEAN = 'BOOLEAN';
+exports.FLOAT = 'FLOAT';
+exports.INT = 'INT';
+exports.ENUM_DEFINITION = 'ENUM_DEFINITION';
+exports.IS_REQUIRED = 'IS_REQUIRED';
+exports.OPEN_BRACKETS = 'OPEN_BRACKETS';
+exports.CLOSE_BRACKETS = 'CLOSE_BRACKETS';
+exports.IS_UNIQUE = 'IS_UNIQUE';
+exports.SCALAR_DEFINITION = 'SCALAR_DEFINITION';
+exports.VARIABLE = 'VARIABLE';
+exports.DONE = 'DONE';
+exports.IN_LOOP = 'IN_LOOP';
+//# sourceMappingURL=constants.js.map

@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`scanner preprocess a dataModel 1`] = `
+"type User {
+id : ID !
+name : String
+roles : [ Roles ! ]
+}"
+`;
+
+exports[`scanner scans a dataModel 1`] = `
+Array [
+  Object {
+    "token": "TYPE_DEFINITION",
+  },
+  Object {
+    "token": "VARIABLE",
+    "value": "User",
+  },
+  Object {
+    "token": "OPEN_BRACES",
+  },
+  Object {
+    "token": "VARIABLE",
+    "value": "id",
+  },
+  Object {
+    "token": "EQUAL",
+  },
+  Object {
+    "token": "TYPE",
+    "value": "ID",
+  },
+  Object {
+    "token": "IS_REQUIRED",
+  },
+  Object {
+    "token": "VARIABLE",
+    "value": "name",
+  },
+  Object {
+    "token": "EQUAL",
+  },
+  Object {
+    "token": "TYPE",
+    "value": "STRING",
+  },
+  Object {
+    "token": "VARIABLE",
+    "value": "roles",
+  },
+  Object {
+    "token": "EQUAL",
+  },
+  Object {
+    "token": "OPEN_BRACKETS",
+  },
+  Object {
+    "token": "VARIABLE",
+    "value": "Roles",
+  },
+  Object {
+    "token": "IS_REQUIRED",
+  },
+  Object {
+    "token": "CLOSE_BRACKETS",
+  },
+  Object {
+    "token": "CLOSE_BRACES",
+  },
+]
+`;
+
+exports[`scanner throws an error when invalid syntax 1`] = `"Unrecognized character: ("`;
