@@ -20,7 +20,6 @@ export const hasValidGrammar = (tokens: Array<Token>):boolean => {
 
   tokens.forEach((each:Token) => {
     if (context[each.token] === DONE) {
-
       if (loops === 0) {
         valid = true
         context = grammar
@@ -30,14 +29,12 @@ export const hasValidGrammar = (tokens: Array<Token>):boolean => {
       }
 
     } else if (context[IN_LOOP] && context[IN_LOOP][each.token]) {
-
       outsideLoop = context
       loops = loops + 1
       context = context[IN_LOOP][each.token]
       valid = false
 
     } else if (context[each.token]) {
-
       context = context[each.token]
       valid = false
 
@@ -62,7 +59,6 @@ export const parse = (tokens: Array<Token>):SDL => {
       actualDefinition = new Defintion(each)
 
     } else if (each.token === CLOSE_BRACES && actualDefinition) {
-
       if (actualAssignment) {
         actualDefinition.addAssignment(actualAssignment)
       }
@@ -71,23 +67,19 @@ export const parse = (tokens: Array<Token>):SDL => {
       insideDefinition = false
 
     } else if (each.token === OPEN_BRACES) {
-
       insideDefinition = true
 
     } else if (each.token === VARIABLE && actualDefinition) {
-
       if (insideDefinition) {
-
         if (actualAssignment) {
           actualDefinition.addAssignment(actualAssignment)
         }
         actualAssignment = new Assignment(each)
-
       } else {
-
         actualDefinition.setName(each)
 
       }
+
     } else if (each.token === EQUAL) {
       isAssignment = true
 
